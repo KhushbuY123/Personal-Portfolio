@@ -68,6 +68,8 @@ export default {
         "blink": { "0%,49%": { opacity: "1" }, "50%,100%": { opacity: "0" } },
         "spin-slow": { from: { transform: "rotate(0deg)" }, to: { transform: "rotate(360deg)" } },
         "rain": { "0%": { transform: "translateY(-100%)" }, "100%": { transform: "translateY(110vh)" } },
+        "draw": { "0%": { strokeDashoffset: "1" }, "100%": { strokeDashoffset: "0" } },
+        "float-y": { "0%,100%": { transform: "translateY(0px)" }, "50%": { transform: "translateY(-8px)" } },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -77,6 +79,7 @@ export default {
         "blink": "blink 1s steps(1) infinite",
         "spin-slow": "spin-slow 30s linear infinite",
         "rain": "rain linear infinite",
+        "float-y": "float-y 6s ease-in-out infinite",
       },
     },
   },
