@@ -121,7 +121,7 @@ export const Terminal = () => {
   ];
 
   return (
-    <section id="terminal" className="py-24 section-divider">
+    <section id="terminal" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
         <p className="label-mono text-center mb-6">// this is an interactive terminal — type commands below</p>
 

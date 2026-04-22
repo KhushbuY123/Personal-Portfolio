@@ -67,6 +67,7 @@ export default {
         "fade-in-slow": { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
         "blink": { "0%,49%": { opacity: "1" }, "50%,100%": { opacity: "0" } },
         "spin-slow": { from: { transform: "rotate(0deg)" }, to: { transform: "rotate(360deg)" } },
+        "rain": { "0%": { transform: "translateY(-100%)" }, "100%": { transform: "translateY(110vh)" } },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -75,6 +76,7 @@ export default {
         "fade-in-slow": "fade-in-slow 1s ease-out both",
         "blink": "blink 1s steps(1) infinite",
         "spin-slow": "spin-slow 30s linear infinite",
+        "rain": "rain linear infinite",
       },
     },
   },

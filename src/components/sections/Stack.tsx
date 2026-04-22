@@ -19,7 +19,7 @@ const groups = [
 
 export const Stack = () => {
   return (
-    <section id="stack" className="py-24 section-divider">
+    <section id="stack" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
         <p className="label-mono mb-6">// stack</p>
         <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">Tools I think in.</h2>
