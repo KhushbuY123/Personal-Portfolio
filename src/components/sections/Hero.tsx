@@ -1,5 +1,6 @@
 import { ArrowRight, Download, Mail } from "lucide-react";
 import { Clock } from "@/components/Clock";
+import { PortraitLine } from "@/components/PortraitLine";
 
 export const Hero = () => {
   return (
@@ -66,29 +67,27 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Tesseract emblem */}
+        {/* Auto-drawing line portrait */}
         <div className="relative mx-auto w-full max-w-sm aspect-square">
-          <div className="absolute inset-0 rounded-full border border-border" />
-          <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full animate-spin-slow">
+          <div className="absolute inset-0 rounded-2xl border border-border bg-card/40 backdrop-blur-sm overflow-hidden">
+            <div className="absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_80%)]" />
+            <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-primary/30 blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-accent/30 blur-3xl" />
+          </div>
+
+          <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full animate-spin-slow pointer-events-none">
             <defs>
-              <path id="circle" d="M 100,100 m -90,0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0" />
+              <path id="circle" d="M 100,100 m -92,0 a 92,92 0 1,1 184,0 a 92,92 0 1,1 -184,0" />
             </defs>
-            <text className="fill-muted-foreground font-mono text-[9px] tracking-[0.3em] uppercase">
-              <textPath href="#circle">associate software engineer · cse '25 · india ·</textPath>
+            <text className="fill-muted-foreground/70 font-mono text-[8px] tracking-[0.3em] uppercase">
+              <textPath href="#circle">khushbu yadav · associate software engineer · cse '25 · india ·</textPath>
             </text>
           </svg>
-          <div className="absolute inset-8 rounded-full bg-card border border-border flex items-center justify-center overflow-hidden">
-            <svg viewBox="0 0 200 200" className="w-3/4 h-3/4 text-foreground/80">
-              <g fill="none" stroke="currentColor" strokeWidth="0.8">
-                <rect x="40" y="40" width="120" height="120" />
-                <rect x="65" y="65" width="70" height="70" />
-                <line x1="40" y1="40" x2="65" y2="65" />
-                <line x1="160" y1="40" x2="135" y2="65" />
-                <line x1="40" y1="160" x2="65" y2="135" />
-                <line x1="160" y1="160" x2="135" y2="135" />
-              </g>
-            </svg>
+
+          <div className="absolute inset-6 flex items-center justify-center text-primary animate-float-y">
+            <PortraitLine />
           </div>
+
           <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-center">
             <p className="font-display font-bold tracking-wider text-primary">KHUSHBU YADAV</p>
             <p className="label-mono mt-1">ASE · AI / SYSTEMS · CSE '25 · INDIA</p>
