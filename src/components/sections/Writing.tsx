@@ -22,7 +22,7 @@ const posts = [
 
 export const Writing = () => {
   return (
-    <section id="writing" className="py-24 section-divider">
+    <section id="writing" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
         <p className="label-mono mb-6">// writing</p>
         <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">Things I've written.</h2>

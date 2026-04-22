@@ -46,7 +46,7 @@ const renderBullet = (text: string) => {
 
 export const Work = () => {
   return (
-    <section id="work" className="py-24 section-divider">
+    <section id="work" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
         <p className="label-mono mb-6">// work</p>
         <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">Where I've worked.</h2>

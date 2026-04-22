@@ -1,15 +1,23 @@
-import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowUpRight, Download, Github, Linkedin, Mail } from "lucide-react";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="py-24 section-divider">
+    <section id="contact" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
         <p className="label-mono mb-6">// contact</p>
         <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">Let's build something.</h2>
         <p className="mt-4 max-w-xl text-muted-foreground">
-          Open to SDE & AI/ML roles for 2026. Always up for an interesting conversation about systems, agents, or
-          applied research.
+          Associate Software Engineer · CSE '25 graduate. Always up for a conversation about systems, agents, or
+          applied research — and open to interesting collaborations.
         </p>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
+        >
+          <Download className="h-4 w-4" /> Download Resume
+        </a>
 
         <div className="mt-12 grid md:grid-cols-3 gap-4">
           {[

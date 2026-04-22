@@ -48,11 +48,32 @@ export const BootLoader = ({ onDone }: { onDone: () => void }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-500 ${
+      className={`fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-500 overflow-hidden ${
         fadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
+      {/* animated background */}
       <div className="absolute inset-0 grid-bg opacity-30" />
+      <div className="absolute -top-32 -left-32 h-[420px] w-[420px] rounded-full bg-primary/30 blur-3xl animate-pulse" />
+      <div className="absolute -bottom-32 -right-32 h-[420px] w-[420px] rounded-full bg-accent/30 blur-3xl animate-pulse [animation-delay:600ms]" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden font-mono text-[10px] leading-tight text-primary/30">
+        {Array.from({ length: 18 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute top-0 whitespace-pre animate-rain"
+            style={{
+              left: `${(i * 100) / 18}%`,
+              animationDuration: `${6 + (i % 5) * 1.5}s`,
+              animationDelay: `${(i % 7) * 0.4}s`,
+            }}
+          >
+            {Array.from({ length: 30 })
+              .map(() => (Math.random() > 0.5 ? "1" : "0"))
+              .join("\n")}
+          </div>
+        ))}
+      </div>
+
       <div className="relative w-full max-w-2xl px-6">
         <div className="rounded-lg border border-border bg-card/80 backdrop-blur shadow-2xl overflow-hidden">
           <div className="flex items-center gap-2 border-b border-border bg-muted/40 px-4 py-2.5">
