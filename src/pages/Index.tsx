@@ -1,16 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect, useState } from "react";
+import { BootLoader } from "@/components/BootLoader";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/sections/Hero";
+import { Stack } from "@/components/sections/Stack";
+import { Work } from "@/components/sections/Work";
+import { Projects } from "@/components/sections/Projects";
+import { Writing } from "@/components/sections/Writing";
+import { Terminal } from "@/components/sections/Terminal";
+import { Contact, Footer } from "@/components/sections/Contact";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [booted, setBooted] = useState(false);
+
+  // lock scroll while booting
+  useEffect(() => {
+    document.body.style.overflow = booted ? "" : "hidden";
+  }, [booted]);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background text-foreground">
+      {!booted && <BootLoader onDone={() => setBooted(true)} />}
+
+      <div className={booted ? "animate-fade-in-slow" : "opacity-0"}>
+        <Navbar />
+        <main>
+          <Hero />
+          <Stack />
+          <Work />
+          <Projects />
+          <Writing />
+          <Terminal />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
