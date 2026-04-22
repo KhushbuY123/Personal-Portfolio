@@ -14,8 +14,8 @@ const COMMANDS: Record<string, () => Line[]> = {
     { kind: "out", text: "  clear            clear the terminal" },
   ],
   whoami: () => [
-    { kind: "out", text: "khushbu yadav — sde & ai/ml engineer" },
-    { kind: "out", text: "cs final year · india · open to work" },
+    { kind: "out", text: "khushbu yadav — associate software engineer (ase)" },
+    { kind: "out", text: "cse '25 passout · india · open to collaborations" },
   ],
   "ls --experience": () => [
     { kind: "ok", text: "[ ok ] sde intern · emerson · jul 2025 → present" },
@@ -144,7 +144,7 @@ export const Terminal = () => {
             <aside className="border-b md:border-b-0 md:border-r border-border bg-background/40 p-5">
               <div className="mb-6">
                 <p className="font-display font-bold text-primary text-lg leading-tight">KHUSHBU YADAV</p>
-                <p className="label-mono mt-2">AI & SYSTEMS ENGINEER</p>
+                <p className="label-mono mt-2">ASSOCIATE SOFTWARE ENGINEER</p>
                 <div className="mt-3 flex gap-1.5 flex-wrap">
                   <span className="chip text-[10px] py-0.5">Emerson</span>
                   <span className="chip text-[10px] py-0.5">DRDO-IRDE</span>
