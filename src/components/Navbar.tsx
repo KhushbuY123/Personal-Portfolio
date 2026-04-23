@@ -42,9 +42,6 @@ export const Navbar = () => {
           ))}
         </ul>
         <div className="flex items-center gap-3">
-          <div className="hidden md:block">
-            <Clock compact />
-          </div>
           <button
             onClick={toggle}
             aria-label="Toggle theme"
@@ -52,14 +49,6 @@ export const Navbar = () => {
           >
             {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 rounded-md border border-border px-3 py-2 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
-          >
-            <Download className="h-3.5 w-3.5" /> Resume
-          </a>
           <a
             href="#contact"
             className="hidden sm:inline-flex rounded-md bg-primary px-4 py-2 font-mono text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
