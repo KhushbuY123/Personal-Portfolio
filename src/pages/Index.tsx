@@ -29,6 +29,7 @@ const Index = () => {
           <Stack />
           <Work />
           <Projects />
+          <GitHub />
           <Writing />
           <Terminal />
           <Contact />
