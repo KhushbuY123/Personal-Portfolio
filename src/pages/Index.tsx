@@ -31,6 +31,7 @@ const Index = () => {
           <Work />
           <Projects />
           <GitHub />
+          <Freelance />
           <Writing />
           <Terminal />
           <Contact />
