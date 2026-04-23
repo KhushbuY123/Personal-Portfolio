@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Stack } from "@/components/sections/Stack";
 import { Work } from "@/components/sections/Work";
 import { Projects } from "@/components/sections/Projects";
+import { GitHub } from "@/components/sections/GitHub";
 import { Writing } from "@/components/sections/Writing";
 import { Terminal } from "@/components/sections/Terminal";
 import { Contact, Footer } from "@/components/sections/Contact";
@@ -28,6 +29,7 @@ const Index = () => {
           <Stack />
           <Work />
           <Projects />
+          <GitHub />
           <Writing />
           <Terminal />
           <Contact />
