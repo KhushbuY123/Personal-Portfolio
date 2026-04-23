@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { GitHubHeatmap } from "@/components/GitHubHeatmap";
+import { GitHubHeatmap } from "../GitHubHeatmap";
 
 const projects = [
   {
