@@ -78,20 +78,12 @@ export const Hero = () => {
             </text>
           </svg>
           <div className="absolute inset-8 rounded-full bg-card border border-border flex items-center justify-center overflow-hidden">
-            <svg viewBox="0 0 200 200" className="w-3/4 h-3/4 text-foreground/80">
-              <g fill="none" stroke="currentColor" strokeWidth="0.8">
-                <rect x="40" y="40" width="120" height="120" />
-                <rect x="65" y="65" width="70" height="70" />
-                <line x1="40" y1="40" x2="65" y2="65" />
-                <line x1="160" y1="40" x2="135" y2="65" />
-                <line x1="40" y1="160" x2="65" y2="135" />
-                <line x1="160" y1="160" x2="135" y2="135" />
-              </g>
-            </svg>
-          </div>
-          <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-center">
-            <p className="font-display font-bold tracking-wider text-primary">KHUSHBU YADAV</p>
-            <p className="label-mono mt-1">ASE · AI / SYSTEMS · CSE '25 · INDIA</p>
+            <span
+              className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-5xl md:text-6xl text-center px-4 leading-tight"
+              style={{ fontFamily: '"Dancing Script", "Brush Script MT", cursive' }}
+            >
+              Khushbu<br />Yadav
+            </span>
           </div>
         </div>
       </div>
