@@ -1,7 +1,6 @@
-import { Download, Moon, Sun } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useTheme } from "./ThemeProvider";
-import { Clock } from "./Clock";
 
 const links = [
   { label: "About", href: "#about" },
