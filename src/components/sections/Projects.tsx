@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { GitHubHeatmap } from "@/components/GitHubHeatmap";
 
 const projects = [
   {
@@ -122,21 +123,9 @@ export const Projects = () => {
           </a>
         </div>
 
-        {/* PR contributions */}
-        <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-4 gap-px rounded-xl border border-border bg-border overflow-hidden">
-          {[
-            { name: "NGAOpenData", pr: "#17", desc: "Geospatial data tooling — open government dataset pipeline improvement" },
-            { name: "adenhq (YC '20)", pr: "#2348", desc: "YC-backed productivity platform — agent infrastructure fix" },
-            { name: "Roboflow", pr: "#262", desc: "Computer vision toolkit — dataset pipeline improvement" },
-            { name: "Mindscape", pr: "#14", desc: "AI reasoning framework — mental health monitoring" },
-          ].map((c) => (
-            <div key={c.name} className="bg-card p-5">
-              <p className="font-mono font-semibold text-primary">{c.name}</p>
-              <p className="mt-1 font-mono text-xs text-muted-foreground">PR {c.pr}</p>
-              <p className="mt-3 text-sm text-foreground/80 leading-relaxed">{c.desc}</p>
-            </div>
-          ))}
-        </div>
+        {/* GitHub contribution heatmap */}
+        <GitHubHeatmap />
+
       </div>
     </section>
   );
