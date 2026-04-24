@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 
 const lines = [
-  { text: "$ whoami", delay: 35 },
-  { text: "khushbu yadav · cse '25 · india", delay: 25 },
+  { text: "$ booting khushbu_os v2.6.1 ...", delay: 30 },
+  { text: "[ ok ] mounting /portfolio", delay: 25 },
+  { text: "[ ok ] loading kernel: creativity-4.1.0", delay: 25 },
+  { text: "[ ok ] starting service: design-system", delay: 25 },
+  { text: "[ ok ] starting service: animations", delay: 25 },
+  { text: "[ ok ] connecting: github.com/khushbuyadav", delay: 25 },
+  { text: "[ ok ] decrypting: ./profile --user=khushbu", delay: 25 },
   { text: "$ ./launch --portfolio", delay: 35 },
   { text: "ready.", delay: 40 },
 ];
