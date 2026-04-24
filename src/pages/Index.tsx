@@ -11,6 +11,7 @@ import { Writing } from "@/components/sections/Writing";
 import { Terminal } from "@/components/sections/Terminal";
 import { Contact, Footer } from "@/components/sections/Contact";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { CursorGlow } from "@/components/CursorGlow";
 
 const Index = () => {
   const [booted, setBooted] = useState(false);
@@ -40,6 +41,7 @@ const Index = () => {
         <Footer />
       </div>
       {booted && <ScrollToTop />}
+      {booted && <CursorGlow />}
     </div>
   );
 };
