@@ -32,7 +32,9 @@ export const GitHub = () => {
             </div>
           </div>
           <a
-            href="#"
+            href="https://github.com/KhushbuY1023"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-4 py-2 font-mono text-sm hover:border-primary/50 hover:text-primary transition-colors"
           >
             View GitHub <ArrowUpRight className="h-3.5 w-3.5" />

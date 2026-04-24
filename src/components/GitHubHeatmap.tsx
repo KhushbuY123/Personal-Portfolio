@@ -1,82 +1,64 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-const WEEKS = 53;
-const DAYS = 7;
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const USERNAME = "KhushbuY1023";
 
-// Deterministic pseudo-random so it renders consistently
-const seeded = (n: number) => {
-  const x = Math.sin(n * 9301 + 49297) * 233280;
-  return x - Math.floor(x);
-};
+type Day = { date: string; count: number; level: number };
 
 const levelClass = (lvl: number) => {
   switch (lvl) {
-    case 0:
-      return "bg-muted/40";
-    case 1:
-      return "bg-primary/20";
-    case 2:
-      return "bg-primary/40";
-    case 3:
-      return "bg-primary/70";
-    case 4:
-      return "bg-primary";
-    default:
-      return "bg-muted/40";
+    case 0: return "bg-muted/40";
+    case 1: return "bg-primary/20";
+    case 2: return "bg-primary/40";
+    case 3: return "bg-primary/70";
+    case 4: return "bg-primary";
+    default: return "bg-muted/40";
   }
 };
 
 export const GitHubHeatmap = () => {
-  const { cells, total, monthLabels } = useMemo(() => {
-    const today = new Date();
-    const start = new Date(today);
-    start.setDate(today.getDate() - (WEEKS * DAYS - 1));
-    // align to Sunday
-    start.setDate(start.getDate() - start.getDay());
+  const [days, setDays] = useState<Day[] | null>(null);
+  const [total, setTotal] = useState(0);
+  const [error, setError] = useState<string | null>(null);
 
-    const grid: { date: Date; level: number; count: number }[][] = [];
-    let total = 0;
-
-    for (let w = 0; w < WEEKS; w++) {
-      const col: { date: Date; level: number; count: number }[] = [];
-      for (let d = 0; d < DAYS; d++) {
-        const date = new Date(start);
-        date.setDate(start.getDate() + w * 7 + d);
-        if (date > today) {
-          col.push({ date, level: -1, count: 0 });
-          continue;
-        }
-        const r = seeded(w * 7 + d + 1);
-        const isWeekend = d === 0 || d === 6;
-        const bias = isWeekend ? 0.55 : 0.25;
-        let count = 0;
-        if (r > bias) {
-          count = Math.floor((r - bias) * 18);
-        }
-        let level = 0;
-        if (count > 0) level = 1;
-        if (count > 3) level = 2;
-        if (count > 7) level = 3;
-        if (count > 12) level = 4;
-        total += count;
-        col.push({ date, level, count });
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await fetch(`https://github-contributions-api.jogruber.de/v4/${USERNAME}?y=last`);
+        if (!res.ok) throw new Error("fetch failed");
+        const data = await res.json();
+        if (cancelled) return;
+        setDays(data.contributions as Day[]);
+        setTotal((data.contributions as Day[]).reduce((a, d) => a + d.count, 0));
+      } catch (e) {
+        if (!cancelled) setError("Could not load GitHub contributions");
       }
-      grid.push(col);
-    }
+    })();
+    return () => { cancelled = true; };
+  }, []);
 
+  const { weeks, monthLabels } = useMemo(() => {
+    if (!days) return { weeks: [] as Day[][], monthLabels: [] as { week: number; label: string }[] };
+    // group into weeks aligned by weekday of first day
+    const first = new Date(days[0].date);
+    const leading = first.getDay(); // 0..6
+    const padded: (Day | null)[] = [...Array(leading).fill(null), ...days];
+    const weeks: (Day | null)[][] = [];
+    for (let i = 0; i < padded.length; i += 7) weeks.push(padded.slice(i, i + 7));
     const monthLabels: { week: number; label: string }[] = [];
     let lastMonth = -1;
-    grid.forEach((col, w) => {
-      const m = col[0].date.getMonth();
+    weeks.forEach((col, w) => {
+      const firstDay = col.find(Boolean) as Day | undefined;
+      if (!firstDay) return;
+      const m = new Date(firstDay.date).getMonth();
       if (m !== lastMonth) {
         monthLabels.push({ week: w, label: MONTHS[m] });
         lastMonth = m;
       }
     });
-
-    return { cells: grid, total, monthLabels };
-  }, []);
+    return { weeks: weeks as Day[][], monthLabels };
+  }, [days]);
 
   return (
     <div className="mt-5 rounded-xl border border-border bg-card p-6">
@@ -84,7 +66,9 @@ export const GitHubHeatmap = () => {
         <div>
           <p className="font-mono font-semibold text-primary text-sm">contribution.heatmap</p>
           <p className="mt-1 font-mono text-xs text-muted-foreground">
-            {total.toLocaleString()} contributions in the last year
+            {days
+              ? `${total.toLocaleString()} contributions in the last year · @${USERNAME}`
+              : error ?? "loading contributions…"}
           </p>
         </div>
         <div className="flex items-center gap-2 font-mono text-[10px] text-muted-foreground">
@@ -98,7 +82,6 @@ export const GitHubHeatmap = () => {
 
       <div className="overflow-x-auto">
         <div className="inline-block min-w-full">
-          {/* Month labels */}
           <div className="flex pl-7 mb-1 relative h-3">
             {monthLabels.map((m) => (
               <span
@@ -112,25 +95,21 @@ export const GitHubHeatmap = () => {
           </div>
 
           <div className="flex gap-[3px]">
-            {/* Day labels */}
             <div className="flex flex-col gap-[3px] pr-1 font-mono text-[9px] text-muted-foreground">
               {["", "Mon", "", "Wed", "", "Fri", ""].map((d, i) => (
-                <span key={i} className="h-2.5 leading-[10px]">
-                  {d}
-                </span>
+                <span key={i} className="h-2.5 leading-[10px]">{d}</span>
               ))}
             </div>
 
-            {cells.map((col, w) => (
+            {weeks.map((col, w) => (
               <div key={w} className="flex flex-col gap-[3px]">
-                {col.map((cell, d) => {
-                  if (cell.level === -1) {
-                    return <span key={d} className="h-2.5 w-2.5" />;
-                  }
+                {Array.from({ length: 7 }).map((_, d) => {
+                  const cell = col[d];
+                  if (!cell) return <span key={d} className="h-2.5 w-2.5" />;
                   return (
                     <span
                       key={d}
-                      title={`${cell.count} contributions on ${cell.date.toDateString()}`}
+                      title={`${cell.count} contributions on ${cell.date}`}
                       className={`h-2.5 w-2.5 rounded-sm ${levelClass(cell.level)} hover:ring-1 hover:ring-primary/60 transition`}
                     />
                   );

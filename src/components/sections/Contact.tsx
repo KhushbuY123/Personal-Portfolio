@@ -21,9 +21,9 @@ export const Contact = () => {
 
         <div className="mt-12 grid md:grid-cols-3 gap-4">
           {[
-            { Icon: Mail, label: "Email", value: "khushbu.yadav@example.dev", href: "mailto:khushbu.yadav@example.dev" },
-            { Icon: Github, label: "GitHub", value: "@khushbuyadav", href: "#" },
-            { Icon: Linkedin, label: "LinkedIn", value: "in/khushbuyadav", href: "#" },
+            { Icon: Mail, label: "Email", value: "khushbuyad123@gmail.com", href: "mailto:khushbuyad123@gmail.com" },
+            { Icon: Github, label: "GitHub", value: "@KhushbuY1023", href: "https://github.com/KhushbuY1023" },
+            { Icon: Linkedin, label: "LinkedIn", value: "in/khushbu10yadav", href: "https://www.linkedin.com/in/khushbu10yadav/" },
           ].map(({ Icon, label, value, href }) => (
             <a
               key={label}
