@@ -1,7 +1,35 @@
 import { ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
 import { GitHubHeatmap } from "../GitHubHeatmap";
 
+const USERNAME = "KhushbuY1023";
+
 export const GitHub = () => {
+  const [repos, setRepos] = useState<number | null>(null);
+  const [stars, setStars] = useState<number | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const [userRes, reposRes] = await Promise.all([
+          fetch(`https://api.github.com/users/${USERNAME}`),
+          fetch(`https://api.github.com/users/${USERNAME}/repos?per_page=100&type=owner`),
+        ]);
+        const user = await userRes.json();
+        const reposData = await reposRes.json();
+        if (cancelled) return;
+        setRepos(user.public_repos ?? (Array.isArray(reposData) ? reposData.length : 0));
+        if (Array.isArray(reposData)) {
+          setStars(reposData.reduce((a: number, r: any) => a + (r.stargazers_count || 0), 0));
+        }
+      } catch {
+        /* ignore */
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
+
   return (
     <section id="github" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
@@ -23,11 +51,11 @@ export const GitHub = () => {
           </div>
           <div className="flex items-center gap-10">
             <div>
-              <div className="font-display text-3xl font-bold">50+</div>
-              <div className="label-mono mt-1">OSS Repos</div>
+              <div className="font-display text-3xl font-bold">{repos !== null ? repos : "—"}</div>
+              <div className="label-mono mt-1">Public Repos</div>
             </div>
             <div>
-              <div className="font-display text-3xl font-bold">100+</div>
+              <div className="font-display text-3xl font-bold">{stars !== null ? stars : "—"}</div>
               <div className="label-mono mt-1">Stars Earned</div>
             </div>
           </div>
