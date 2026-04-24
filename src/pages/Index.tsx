@@ -10,6 +10,7 @@ import { Freelance } from "@/components/sections/Freelance";
 import { Writing } from "@/components/sections/Writing";
 import { Terminal } from "@/components/sections/Terminal";
 import { Contact, Footer } from "@/components/sections/Contact";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Index = () => {
   const [booted, setBooted] = useState(false);
@@ -38,6 +39,7 @@ const Index = () => {
         </main>
         <Footer />
       </div>
+      {booted && <ScrollToTop />}
     </div>
   );
 };
