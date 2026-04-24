@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 const lines = [
   { text: "$ whoami", delay: 35 },
   { text: "khushbu yadav · cse '25 · india", delay: 25 },
+  { text: "$ load --stack=react,ts,python", delay: 30 },
+  { text: "[ ok ] systems online · coffee: full", delay: 25 },
   { text: "$ ./launch --portfolio", delay: 35 },
   { text: "ready.", delay: 40 },
 ];
