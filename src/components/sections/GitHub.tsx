@@ -1,5 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
 import { GitHubHeatmap } from "../GitHubHeatmap";
+
+const USERNAME = "KhushbuY1023";
 
 export const GitHub = () => {
   return (
