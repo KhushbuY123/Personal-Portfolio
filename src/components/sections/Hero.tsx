@@ -1,7 +1,41 @@
 import { ArrowRight, Download, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Clock } from "@/components/Clock";
 
+const TYPE_WORDS = ["performs.", "scales.", "ships.", "lasts.", "delights."];
+
+const useTypewriter = (words: string[], typeMs = 90, deleteMs = 50, holdMs = 1400) => {
+  const [text, setText] = useState("");
+  const [idx, setIdx] = useState(0);
+  const [deleting, setDeleting] = useState(false);
+
+  useEffect(() => {
+    const word = words[idx];
+    if (!deleting && text === word) {
+      const t = setTimeout(() => setDeleting(true), holdMs);
+      return () => clearTimeout(t);
+    }
+    if (deleting && text === "") {
+      setDeleting(false);
+      setIdx((i) => (i + 1) % words.length);
+      return;
+    }
+    const t = setTimeout(
+      () => {
+        setText((cur) =>
+          deleting ? word.slice(0, cur.length - 1) : word.slice(0, cur.length + 1)
+        );
+      },
+      deleting ? deleteMs : typeMs
+    );
+    return () => clearTimeout(t);
+  }, [text, deleting, idx, words, typeMs, deleteMs, holdMs]);
+
+  return text;
+};
+
 export const Hero = () => {
+  const typed = useTypewriter(TYPE_WORDS);
   return (
     <section id="about" className="relative pt-32 pb-24 overflow-hidden scroll-mt-20">
       <div className="absolute inset-0 grid-bg opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
@@ -30,7 +64,7 @@ export const Hero = () => {
             <span className="italic font-display text-muted-foreground/80">
               that{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent not-italic font-display italic">
-                performs.
+                {typed}
               </span>
             </span>
             <span className="text-primary animate-blink">|</span>
