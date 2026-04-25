@@ -25,12 +25,12 @@ export const Hero = () => {
           </div>
 
           <h1 className="font-display font-bold text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
-            Engineering things
+            Shipping software
             <br />
             <span className="italic font-display text-muted-foreground/80">
               that{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent not-italic font-display italic">
-                ship.
+                performs.
               </span>
             </span>
             <span className="text-primary animate-blink">|</span>
