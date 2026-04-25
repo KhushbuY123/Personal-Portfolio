@@ -22,9 +22,9 @@ export const Stack = () => {
     <section id="stack" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
         <p className="label-mono mb-6">// stack</p>
-        <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">Tools I think in.</h2>
+        <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">My daily stack.</h2>
         <p className="mt-4 max-w-xl text-muted-foreground">
-          From systems programming to orchestration to inference — the full picture.
+          From systems code to orchestration to inference — the full toolkit.
         </p>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px rounded-xl border border-border bg-border overflow-hidden">
