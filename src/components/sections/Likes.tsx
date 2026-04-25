@@ -47,10 +47,10 @@ export const Likes = () => {
         <div className="mx-auto max-w-2xl text-center">
           <p className="label-mono mb-3 text-primary">// show some love</p>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-            Enjoying the portfolio?
+            Liked what you saw?
           </h2>
           <p className="text-muted-foreground mb-10">
-            Tap the heart to leave a like. One per visitor — every tap means a lot.
+            Drop a heart to let me know it resonated — one tap per visitor, and it genuinely makes my day.
           </p>
 
           <div className="flex flex-col items-center gap-5">
