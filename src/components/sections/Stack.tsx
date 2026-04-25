@@ -1,19 +1,19 @@
 const groups = [
   {
     label: "Languages",
-    items: ["C", "C++", "Python", "Java", "JavaScript", "Rust", "Bash"],
+    items: ["Python", "JavaScript", "TypeScript"],
   },
   {
     label: "Frameworks",
-    items: ["Spring Boot", "React", "Next.js", "Express", "FastAPI", "Kafka", "PyTorch", "Wordpress"],
+    items: ["React", "Next.js", "Node.js", "Express", "MUI", "Tailwind"],
   },
   {
-    label: "Cloud & Infra",
-    items: ["AWS", "Docker", "Kubernetes", "Grafana", "Terraform", "GraphQL", "Cloudflare"],
+    label: "Cloud & Tools",
+    items: ["Vercel", "Render", "Git"],
   },
   {
-    label: "AI & Data",
-    items: ["LangChain", "LangGraph", "Ollama", "Claude", "MySQL", "MongoDB", "Redis", "PostgreSQL", "Cassandra"],
+    label: "Databases",
+    items: ["MongoDB", "PostgreSQL"],
   },
 ];
 
