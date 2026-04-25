@@ -11,6 +11,7 @@ import { Writing } from "@/components/sections/Writing";
 import { Terminal } from "@/components/sections/Terminal";
 import { Contact, Footer } from "@/components/sections/Contact";
 import { Recommendations } from "@/components/sections/Recommendations";
+import { Likes } from "@/components/sections/Likes";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Index = () => {
@@ -37,6 +38,7 @@ const Index = () => {
           <Writing />
           <Recommendations />
           <Terminal />
+          <Likes />
           <Contact />
         </main>
         <Footer />
