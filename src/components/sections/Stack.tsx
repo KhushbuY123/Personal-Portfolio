@@ -1,19 +1,19 @@
 const groups = [
   {
     label: "Languages",
-    items: ["Python", "JavaScript", "TypeScript"],
+    items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS"],
   },
   {
     label: "Frameworks",
-    items: ["React", "Next.js", "Node.js", "Express", "MUI", "Tailwind"],
+    items: ["React", "Next.js", "Node.js", "Express", "MUI", "Tailwind", "Redux Toolkit", "Framer Motion"],
   },
   {
     label: "Cloud & Tools",
-    items: ["Vercel", "Render", "Git"],
+    items: ["Vercel", "Render", "Git", "REST API"],
   },
   {
     label: "Databases",
-    items: ["MongoDB", "PostgreSQL"],
+    items: ["MongoDB", "Mongoose", "PostgreSQL"],
   },
 ];
 
