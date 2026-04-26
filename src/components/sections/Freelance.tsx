@@ -15,9 +15,9 @@ const services = [
   },
   {
     icon: Database,
-    tag: "DB",
-    title: "Database Design & Optimization",
-    desc: "PostgreSQL and MongoDB schemas, query tuning, and migrations built for scale.",
+    tag: "UI",
+    title: "UI Components & Design Systems",
+    desc: "Reusable React components, Tailwind theming, and pixel-clean responsive layouts.",
   },
 ];
 
