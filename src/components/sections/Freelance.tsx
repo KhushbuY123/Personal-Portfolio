@@ -1,4 +1,4 @@
-import { ArrowUpRight, Briefcase, Code2, Globe, Database, Mail } from "lucide-react";
+import { ArrowUpRight, Briefcase, Code2, Globe, Layers, Mail } from "lucide-react";
 
 const services = [
   {
@@ -14,7 +14,7 @@ const services = [
     desc: "REST and serverless endpoints, auth, databases, and integrations wired cleanly.",
   },
   {
-    icon: Database,
+    icon: Layers,
     tag: "UI",
     title: "UI Components & Design Systems",
     desc: "Reusable React components, Tailwind theming, and pixel-clean responsive layouts.",
