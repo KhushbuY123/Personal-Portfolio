@@ -1,4 +1,4 @@
-import { ArrowUpRight, Briefcase, Code2, Globe, Layers, Mail } from "lucide-react";
+import { ArrowUpRight, Briefcase, Code2, Globe, Smartphone, Mail } from "lucide-react";
 
 const services = [
   {
@@ -14,10 +14,10 @@ const services = [
     desc: "REST and serverless endpoints, auth, databases, and integrations wired cleanly.",
   },
   {
-    icon: Layers,
-    tag: "UI",
-    title: "UI Components & Design Systems",
-    desc: "Reusable React components, Tailwind theming, and pixel-clean responsive layouts.",
+    icon: Smartphone,
+    tag: "PWA",
+    title: "Progressive Web Apps",
+    desc: "Installable, offline-ready web apps with native-like UX — no app store required.",
   },
 ];
 
