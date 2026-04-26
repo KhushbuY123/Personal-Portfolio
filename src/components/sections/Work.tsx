@@ -1,32 +1,24 @@
 const roles = [
   {
-    period: { from: "Jul 2025", to: "Present", active: true },
-    title: "SDE Intern",
-    org: "Emerson · Hyderabad, India",
+    period: { from: "Aug 2025", to: "Present", active: true },
+    title: "Associate Software Engineer",
+    org: "Shunyity Tech Solutions",
     bullets: [
-      "Shipped a full-stack invoicing system that cut manual billing effort by **90%** — React frontend, FastAPI backend, C++ computation engines for high-throughput processing.",
-      "Architected a session-isolated agentic backend that handles **1,000+ concurrent users** at TTFT p95 under 3 seconds, running entirely on local infrastructure for air-gapped security compliance.",
-      "Built a RAG pipeline (LangChain + FAISS) with custom chunking and retrieval strategies — meaningfully improved accuracy on internal knowledge queries.",
+      "Developing type-safe, production-grade applications using **TypeScript, React, and PostgreSQL**, improving code reliability and maintainability.",
+      "Architected modular frontend components and reusable hooks, reducing development time for new features by **30%+**.",
+      "Optimized database schema design and query performance in PostgreSQL, enabling efficient handling of large datasets.",
+      "Worked closely with cross-functional teams to deliver scalable solutions, focusing on performance, clean architecture, and best practices.",
     ],
   },
   {
-    period: { from: "Jan 2026", to: "Present", active: true },
-    title: "Research Intern",
-    org: "DRDO-IRDE · Grant No. DFTM/034",
+    period: { from: "Aug 2024", to: "Jul 2025", active: false },
+    title: "Full Stack Developer Intern",
+    org: "Shunyity Tech Solutions",
     bullets: [
-      "Developing Transformer-based models that restore weather-degraded optical sensor images with **92% structural similarity** — practically useful in adverse field conditions.",
-      "Cut inference latency by **90%** through network pruning and aggressive pipeline optimisation, making real-time deployment viable.",
-      "**150%+ gain** in scene context analysis accuracy over baseline using custom image enhancement algorithms.",
-    ],
-  },
-  {
-    period: { from: "Feb 2024", to: "Oct 2024", active: false },
-    title: "Core Contributor",
-    org: "Project Sarvadrushti · Open Source",
-    bullets: [
-      "Built and benchmarked Vision Enhancement algorithms for paramilitary use — fog, rain, and haze removal from live optical feeds.",
-      "REST APIs and ingestion pipelines at **sub-500ms latency** with integrity checks and automatic fallback handling.",
-      "Modified CycleGAN architecture improved model robustness by **~40%** in low-visibility scenarios. Directly contributed to the grant proposal.",
+      "Built and deployed scalable full-stack web applications using **Next.js, Node.js, and MongoDB**, improving overall application performance and load efficiency.",
+      "Designed RESTful APIs and optimized database queries, reducing response time by up to **40%** for high-traffic endpoints.",
+      "Implemented server-side rendering and dynamic routing with Next.js, enhancing SEO performance and user experience.",
+      "Collaborated on feature development and debugging across frontend and backend, ensuring smooth integration and faster delivery cycles.",
     ],
   },
 ];
