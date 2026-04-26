@@ -7,7 +7,7 @@ import { Work } from "@/components/sections/Work";
 import { Projects } from "@/components/sections/Projects";
 import { GitHub } from "@/components/sections/GitHub";
 import { Freelance } from "@/components/sections/Freelance";
-import { Writing } from "@/components/sections/Writing";
+
 import { Terminal } from "@/components/sections/Terminal";
 import { Contact, Footer } from "@/components/sections/Contact";
 import { Recommendations } from "@/components/sections/Recommendations";
@@ -35,7 +35,7 @@ const Index = () => {
           <Projects />
           <GitHub />
           <Freelance />
-          <Writing />
+          
           <Recommendations />
           <Terminal />
           <Likes />
