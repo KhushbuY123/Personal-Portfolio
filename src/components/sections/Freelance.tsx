@@ -1,4 +1,4 @@
-import { ArrowUpRight, Briefcase, Code2, Globe, Sparkles, Mail } from "lucide-react";
+import { ArrowUpRight, Briefcase, Code2, Globe, Database, Mail } from "lucide-react";
 
 const services = [
   {
@@ -14,10 +14,10 @@ const services = [
     desc: "REST and serverless endpoints, auth, databases, and integrations wired cleanly.",
   },
   {
-    icon: Sparkles,
-    tag: "AI",
-    title: "AI / ML Integrations",
-    desc: "LLM features, RAG pipelines, computer-vision modules — shipped, not just demoed.",
+    icon: Database,
+    tag: "DB",
+    title: "Database Design & Optimization",
+    desc: "PostgreSQL and MongoDB schemas, query tuning, and migrations built for scale.",
   },
 ];
 
@@ -38,7 +38,7 @@ export const Freelance = () => {
         </h2>
         <p className="mt-4 max-w-xl text-muted-foreground">
           Outside of my day job, I take on a small number of focused builds — web apps, backends,
-          and AI features. Async-friendly, ship-first, no fluff.
+          and database work. Async-friendly, ship-first, no fluff.
         </p>
 
         <div className="mt-14 grid md:grid-cols-3 gap-5">
