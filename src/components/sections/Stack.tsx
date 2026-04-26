@@ -4,16 +4,20 @@ const groups = [
     items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS"],
   },
   {
-    label: "Frameworks",
-    items: ["React", "Next.js", "Node.js", "Express", "MUI", "Tailwind", "Redux Toolkit", "Framer Motion"],
+    label: "Frontend",
+    items: ["React", "Next.js", "Tailwind", "MUI", "Redux Toolkit", "Framer Motion"],
   },
   {
-    label: "Cloud & Tools",
-    items: ["Vercel", "Render", "Git", "REST API"],
+    label: "Backend",
+    items: ["Node.js", "Express", "Mongoose", "REST API"],
   },
   {
     label: "Databases",
-    items: ["MongoDB", "Mongoose", "PostgreSQL"],
+    items: ["MongoDB", "PostgreSQL"],
+  },
+  {
+    label: "Cloud & Tools",
+    items: ["Vercel", "Render", "Git"],
   },
 ];
 
@@ -27,7 +31,7 @@ export const Stack = () => {
           From systems code to orchestration to inference — the full toolkit.
         </p>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px rounded-xl border border-border bg-border overflow-hidden">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px rounded-xl border border-border bg-border overflow-hidden">
           {groups.map((g) => (
             <div key={g.label} className="bg-card p-6">
               <p className="label-mono mb-4">{g.label}</p>
