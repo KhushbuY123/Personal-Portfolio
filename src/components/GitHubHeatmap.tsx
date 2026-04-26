@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const USERNAME = "KhushbuY1023";
+const USERNAME = "KhushbuY123";
 
 type Day = { date: string; count: number; level: number };
 

@@ -2,7 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { GitHubHeatmap } from "../GitHubHeatmap";
 
-const USERNAME = "KhushbuY1023";
+const USERNAME = "KhushbuY123";
 
 export const GitHub = () => {
   const [repos, setRepos] = useState<number | null>(null);
@@ -60,7 +60,7 @@ export const GitHub = () => {
             </div>
           </div>
           <a
-            href="https://github.com/KhushbuY1023"
+            href="https://github.com/KhushbuY123"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-4 py-2 font-mono text-sm hover:border-primary/50 hover:text-primary transition-colors"
