@@ -170,7 +170,7 @@ export const Terminal = () => {
                 <div className="flex justify-between"><span className="text-muted-foreground">server</span><span>cloudflare</span></div>
                 <div className="flex justify-between"><span className="text-muted-foreground">cdn</span><span>cf cdn</span></div>
                 <div className="flex justify-between"><span className="text-muted-foreground">location</span><span>IND</span></div>
-                <div className="flex justify-between"><span className="text-muted-foreground">cgpa</span><span>9.05 / 10</span></div>
+                <div className="flex justify-between"><span className="text-muted-foreground">cgpa</span><span>8.24 / 10</span></div>
                 <div className="flex justify-between"><span className="text-muted-foreground">status</span><span className="text-terminal-green">READY</span></div>
               </div>
             </aside>
