@@ -144,8 +144,8 @@ export const Terminal = () => {
                 <p className="font-display font-bold text-primary text-lg leading-tight">KHUSHBU YADAV</p>
                 <p className="label-mono mt-2">ASSOCIATE SOFTWARE ENGINEER</p>
                 <div className="mt-3 flex gap-1.5 flex-wrap">
-                  <span className="chip text-[10px] py-0.5">Emerson</span>
-                  <span className="chip text-[10px] py-0.5">DRDO-IRDE</span>
+                  <span className="chip text-[10px] py-0.5">Shunyity</span>
+                  <span className="chip text-[10px] py-0.5">Full-Stack</span>
                 </div>
                 <span className="mt-2 inline-block rounded border border-terminal-green/40 bg-terminal-green/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-terminal-green">
                   Open to work
@@ -221,7 +221,7 @@ export const Terminal = () => {
 
           <div className="flex items-center justify-between border-t border-border bg-muted/40 px-5 py-2 font-mono text-[10px] uppercase tracking-wider">
             <span className="text-terminal-green">READY</span>
-            <span className="text-muted-foreground hidden sm:block">KHUSHBU_OS :: CORE v9.05 · CSE2026 · ALL SYSTEMS NOMINAL</span>
+            <span className="text-muted-foreground hidden sm:block">KHUSHBU_OS :: CORE v9.05 · CSE2025 · ALL SYSTEMS NOMINAL</span>
             <span className="text-terminal-green flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-terminal-green animate-pulse" /> ONLINE
             </span>
