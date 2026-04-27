@@ -25,7 +25,7 @@ export const Quote = () => {
             </span>
             <br />
             then{" "}
-            <span className="not-italic font-bold text-foreground bg-primary/15 px-3 py-0.5 rounded-md">
+            <span className="not-italic font-bold mt-200 text-foreground bg-primary/15 px-3 py-0.5 rounded-md">
               Impact
             </span>
             <span className="text-muted-foreground">."</span>

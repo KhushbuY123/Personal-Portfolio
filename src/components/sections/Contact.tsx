@@ -5,13 +5,16 @@ export const Contact = () => {
     <section id="contact" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
         <p className="label-mono mb-6">// contact</p>
-        <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">Let's build something.</h2>
+        <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">
+          Let's build something.
+        </h2>
         <p className="mt-4 max-w-xl text-muted-foreground">
-          Associate Software Engineer · CSE '25 graduate. Always up for a conversation about full-stack web,
-          clean APIs, or thoughtful UI — and open to interesting collaborations.
+          Associate Software Engineer · CSE '25 graduate. Always up for a
+          conversation about full-stack web, clean APIs, or thoughtful UI — and
+          open to interesting collaborations.
         </p>
         <a
-          href="/resume.pdf"
+          href="/Khushbu Yadav Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
@@ -21,13 +24,29 @@ export const Contact = () => {
 
         <div className="mt-12 grid md:grid-cols-3 gap-4">
           {[
-            { Icon: Mail, label: "Email", value: "khushbuyad123@gmail.com", href: "mailto:khushbuyad123@gmail.com" },
-            { Icon: Github, label: "GitHub", value: "@KhushbuY123", href: "https://github.com/KhushbuY123" },
-            { Icon: Linkedin, label: "LinkedIn", value: "in/khushbu10yadav", href: "https://www.linkedin.com/in/khushbu10yadav/" },
+            {
+              Icon: Mail,
+              label: "Email",
+              value: "khushbuyad123@gmail.com",
+              href: "mailto:khushbuyad123@gmail.com",
+            },
+            {
+              Icon: Github,
+              label: "GitHub",
+              value: "@KhushbuY123",
+              href: "https://github.com/KhushbuY123",
+            },
+            {
+              Icon: Linkedin,
+              label: "LinkedIn",
+              value: "in/khushbu10yadav",
+              href: "https://www.linkedin.com/in/khushbu10yadav/",
+            },
           ].map(({ Icon, label, value, href }) => (
             <a
               key={label}
               href={href}
+              target="_blank"
               className="group rounded-xl border border-border bg-card p-6 flex items-center justify-between hover:border-primary/50 hover:-translate-y-0.5 transition-all"
             >
               <div className="flex items-center gap-4">

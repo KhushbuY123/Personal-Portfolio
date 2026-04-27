@@ -4,7 +4,12 @@ import { Clock } from "@/components/Clock";
 
 const TYPE_WORDS = ["performs.", "scales.", "ships.", "lasts.", "delights."];
 
-const useTypewriter = (words: string[], typeMs = 90, deleteMs = 50, holdMs = 1400) => {
+const useTypewriter = (
+  words: string[],
+  typeMs = 90,
+  deleteMs = 50,
+  holdMs = 1400,
+) => {
   const [text, setText] = useState("");
   const [idx, setIdx] = useState(0);
   const [deleting, setDeleting] = useState(false);
@@ -23,10 +28,12 @@ const useTypewriter = (words: string[], typeMs = 90, deleteMs = 50, holdMs = 140
     const t = setTimeout(
       () => {
         setText((cur) =>
-          deleting ? word.slice(0, cur.length - 1) : word.slice(0, cur.length + 1)
+          deleting
+            ? word.slice(0, cur.length - 1)
+            : word.slice(0, cur.length + 1),
         );
       },
-      deleting ? deleteMs : typeMs
+      deleting ? deleteMs : typeMs,
     );
     return () => clearTimeout(t);
   }, [text, deleting, idx, words, typeMs, deleteMs, holdMs]);
@@ -37,7 +44,10 @@ const useTypewriter = (words: string[], typeMs = 90, deleteMs = 50, holdMs = 140
 export const Hero = () => {
   const typed = useTypewriter(TYPE_WORDS);
   return (
-    <section id="about" className="relative pt-32 pb-24 overflow-hidden scroll-mt-20">
+    <section
+      id="about"
+      className="relative pt-32 pb-24 overflow-hidden scroll-mt-20"
+    >
       <div className="absolute inset-0 grid-bg opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]" />
       <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-primary/20 blur-3xl opacity-60" />
       <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-accent/20 blur-3xl opacity-50" />
@@ -71,8 +81,10 @@ export const Hero = () => {
           </h1>
 
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
-            I'm <span className="text-foreground font-medium">Khushbu Yadav</span>, an Associate Software Engineer
-            specializing in React and modern full-stack development. I build high-quality, production-grade
+            I'm{" "}
+            <span className="text-foreground font-medium">Khushbu Yadav</span>,
+            an Associate Software Engineer specializing in React and modern
+            full-stack development. I build high-quality, production-grade
             applications that are used daily by real users and teams.
           </p>
 
@@ -84,7 +96,7 @@ export const Hero = () => {
               <Mail className="h-4 w-4" /> Get in touch
             </a>
             <a
-              href="/resume.pdf"
+              href="/Khushbu Yadav Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
@@ -103,20 +115,32 @@ export const Hero = () => {
         {/* Tesseract emblem */}
         <div className="relative mx-auto w-full max-w-sm aspect-square">
           <div className="absolute inset-0 rounded-full border border-border" />
-          <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full animate-spin-slow">
+          <svg
+            viewBox="0 0 200 200"
+            className="absolute inset-0 w-full h-full animate-spin-slow"
+          >
             <defs>
-              <path id="circle" d="M 100,100 m -90,0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0" />
+              <path
+                id="circle"
+                d="M 100,100 m -90,0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0"
+              />
             </defs>
             <text className="fill-muted-foreground font-mono text-[9px] tracking-[0.3em] uppercase">
-              <textPath href="#circle">associate software engineer · cse '25 · india ·</textPath>
+              <textPath href="#circle">
+                associate software engineer · cse '25 · india ·
+              </textPath>
             </text>
           </svg>
           <div className="absolute inset-8 rounded-full bg-card border border-border flex items-center justify-center overflow-hidden">
             <span
               className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-5xl md:text-6xl text-center px-4 leading-tight"
-              style={{ fontFamily: '"Dancing Script", "Brush Script MT", cursive' }}
+              style={{
+                fontFamily: '"Dancing Script", "Brush Script MT", cursive',
+              }}
             >
-              Khushbu<br />Yadav
+              Khushbu
+              <br />
+              Yadav
             </span>
           </div>
         </div>
