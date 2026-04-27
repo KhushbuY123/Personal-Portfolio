@@ -7,8 +7,8 @@ export const Contact = () => {
         <p className="label-mono mb-6">// contact</p>
         <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">Let's build something.</h2>
         <p className="mt-4 max-w-xl text-muted-foreground">
-          Associate Software Engineer · CSE '25 graduate. Always up for a conversation about systems, agents, or
-          applied research — and open to interesting collaborations.
+          Associate Software Engineer · CSE '25 graduate. Always up for a conversation about full-stack web,
+          clean APIs, or thoughtful UI — and open to interesting collaborations.
         </p>
         <a
           href="/resume.pdf"

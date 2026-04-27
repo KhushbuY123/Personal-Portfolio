@@ -3,57 +3,57 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     no: "01",
-    tag: "INFRA",
+    tag: "WEB",
     tagColor: "text-sky-400 border-sky-400/40 bg-sky-400/10",
-    title: "K8s Multi-Store Orchestration Platform",
+    title: "Full-Stack E-Commerce Platform",
     desc:
-      "One-click provision and teardown of isolated WordPress stores across 100+ instances — namespaced, secret-managed, PVC-bound. Idempotent lifecycle from a single React UI.",
-    stack: ["K8s", "React", "Docker", "Redis"],
+      "Production-grade storefront with product catalog, cart, checkout, and admin dashboard. Server-side rendering, optimized queries, and a clean component system.",
+    stack: ["Next.js", "Node.js", "MongoDB", "Tailwind"],
   },
   {
     no: "02",
-    tag: "HFT",
+    tag: "API",
     tagColor: "text-terminal-green border-terminal-green/40 bg-terminal-green/10",
-    title: "Real-Time Oracle Price Feed",
+    title: "REST API & Auth Service",
     desc:
-      "~40ms price ingestion latency for HFT operations. Redis caching layer, PostgreSQL persistence, health-checked REST endpoints, Prometheus metrics, live Svelte dashboard.",
-    stack: ["Rust", "Redis", "Svelte"],
+      "Type-safe REST endpoints with JWT auth, role-based access, and rate limiting. Postgres schema designed for scale, with sub-100ms p95 on hot endpoints.",
+    stack: ["Node.js", "Express", "PostgreSQL", "TypeScript"],
   },
   {
     no: "03",
-    tag: "OSS",
+    tag: "PWA",
     tagColor: "text-primary border-primary/40 bg-primary/10",
-    title: "cuSuite — CUDA Environment Manager",
+    title: "Installable Progressive Web App",
     desc:
-      "GPU, driver, CUDA, and cuDNN version automation via NVIDIA system APIs. 80% setup time reduction. 30+ REST API compatibility tests. v1.13.9 released on GitHub.",
-    stack: ["Python", "Bash", "API"],
+      "Offline-first PWA with service workers, push-ready manifest, and native-like UX. Lighthouse 95+ across performance, accessibility, and best practices.",
+    stack: ["React", "Vite", "Workbox", "Tailwind"],
   },
   {
     no: "04",
-    tag: "VISION",
+    tag: "UI",
     tagColor: "text-accent border-accent/40 bg-accent/10",
-    title: "All-Weather Object Detection",
+    title: "Component Library & Design System",
     desc:
-      "End-to-end pipeline that recovers detection accuracy in fog, rain and low-light. Custom dehazing front-end fused with YOLO heads, fine-tuned for paramilitary deployment.",
-    stack: ["Python", "YOLO", "OpenCV", "Streamlit"],
+      "Reusable React + Tailwind components with theming, dark mode, and accessibility baked in. Drives consistent UI across multiple internal products.",
+    stack: ["React", "TypeScript", "Tailwind", "Radix"],
   },
   {
     no: "05",
-    tag: "TOOL",
+    tag: "DASH",
     tagColor: "text-fuchsia-400 border-fuchsia-400/40 bg-fuchsia-400/10",
-    title: "ds-cli — Dataset Quality Auditor",
+    title: "Realtime Analytics Dashboard",
     desc:
-      "CLI utility that audits image / text datasets for duplicates, label drift, class imbalance and leakage. Generates a publishable report with reproducible seeds.",
-    stack: ["Python", "NumPy", "Bash"],
+      "Interactive dashboard with charts, filters, and live updates. Redux Toolkit for state, Framer Motion for transitions, and a responsive grid that holds up on mobile.",
+    stack: ["React", "Redux Toolkit", "Framer Motion", "REST API"],
   },
   {
     no: "06",
-    tag: "AGENTS",
+    tag: "WEB",
     tagColor: "text-orange-400 border-orange-400/40 bg-orange-400/10",
-    title: "Local Agentic Workbench",
+    title: "Marketing Site & CMS",
     desc:
-      "Self-hosted agent runtime with tool calling, memory, and a streaming chat UI. Runs Llama models via llama.cpp, exposes a FastAPI control plane, ships with React studio.",
-    stack: ["FastAPI", "React", "llama.cpp", "Python"],
+      "SEO-first marketing site with dynamic routing, MDX-driven content, and an editor-friendly CMS. Deployed on Vercel with edge caching and instant rollbacks.",
+    stack: ["Next.js", "MongoDB", "Mongoose", "Vercel"],
   },
 ];
 

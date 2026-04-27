@@ -28,7 +28,7 @@ export const Stack = () => {
         <p className="label-mono mb-6">// stack</p>
         <h2 className="font-display font-bold text-5xl md:text-6xl tracking-tight">My daily stack.</h2>
         <p className="mt-4 max-w-xl text-muted-foreground">
-          From systems code to orchestration to inference — the full toolkit.
+          From clean frontends to type-safe APIs to scalable databases — the full-stack toolkit.
         </p>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px rounded-xl border border-border bg-border overflow-hidden">
