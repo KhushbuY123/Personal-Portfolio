@@ -14,7 +14,7 @@ export const Contact = () => {
           open to interesting collaborations.
         </p>
         <a
-          href="/Khushbu Yadav Resume.pdf"
+          href="/Khushbu-Yadav-Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
