@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { useTheme } from "./ThemeProvider";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Stack", href: "#stack" },
-  { label: "Work", href: "#work" },
-  { label: "Projects", href: "#projects" },
-  { label: "Terminal", href: "#terminal" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Stack", href: "/#stack" },
+  { label: "Work", href: "/#work" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Mini Projects", href: "/mini-projects" },
+  { label: "Terminal", href: "/#terminal" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const Navbar = () => {
