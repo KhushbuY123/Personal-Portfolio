@@ -18,33 +18,31 @@ const COMMANDS: Record<string, () => Line[]> = {
     { kind: "out", text: "cse '25 passout · india · open to collaborations" },
   ],
   "ls --experience": () => [
-    { kind: "ok", text: "[ ok ] sde intern · emerson · jul 2025 → present" },
-    { kind: "ok", text: "[ ok ] research intern · drdo-irde · jan 2026 → present" },
-    { kind: "ok", text: "[ ok ] core contributor · sarvadrushti · feb 2024 → oct 2024" },
+    { kind: "ok", text: "[ ok ] associate software engineer · shunyity tech solutions · aug 2025 → present" },
+    { kind: "ok", text: "[ ok ] full stack developer intern · shunyity tech solutions · aug 2024 → jul 2025" },
   ],
   "ls --projects": () => [
-    { kind: "ok", text: "[ ok ] k8s multi-store orchestration platform" },
-    { kind: "ok", text: "[ ok ] real-time oracle price feed" },
-    { kind: "ok", text: "[ ok ] cuSuite — cuda environment manager" },
-    { kind: "ok", text: "[ ok ] all-weather object detection" },
-    { kind: "ok", text: "[ ok ] local agentic workbench" },
+    { kind: "ok", text: "[ ok ] full-stack e-commerce platform" },
+    { kind: "ok", text: "[ ok ] rest api & auth service" },
+    { kind: "ok", text: "[ ok ] installable progressive web app" },
+    { kind: "ok", text: "[ ok ] component library & design system" },
+    { kind: "ok", text: "[ ok ] realtime analytics dashboard" },
+    { kind: "ok", text: "[ ok ] marketing site & cms" },
   ],
   "cat skills.txt": () => [
-    { kind: "out", text: "languages   : c, c++, python, java, javascript, rust, bash" },
-    { kind: "out", text: "frameworks  : react, next.js, fastapi, spring boot, pytorch" },
-    { kind: "out", text: "infra       : aws, docker, k8s, terraform, cloudflare" },
-    { kind: "out", text: "ai & data   : langchain, ollama, postgres, redis, mongodb" },
+    { kind: "out", text: "languages   : python, javascript, typescript, html, css" },
+    { kind: "out", text: "frontend    : react, next.js, tailwind, mui, redux toolkit, framer motion" },
+    { kind: "out", text: "backend     : node.js, express, mongoose, rest api" },
+    { kind: "out", text: "databases   : mongodb, postgresql" },
+    { kind: "out", text: "tools       : vercel, render, git" },
   ],
   "cat contact.txt": () => [
-    { kind: "out", text: "email    : khushbu.yadav@example.dev" },
-    { kind: "out", text: "github   : github.com/khushbuyadav" },
-    { kind: "out", text: "linkedin : linkedin.com/in/khushbuyadav" },
+    { kind: "out", text: "email    : khushbuyad123@gmail.com" },
+    { kind: "out", text: "github   : github.com/KhushbuY123" },
+    { kind: "out", text: "linkedin : linkedin.com/in/khushbu10yadav" },
   ],
   "./open-source": () => [
-    { kind: "out", text: "NGAOpenData   #17    geospatial data tooling" },
-    { kind: "out", text: "adenhq        #2348  agent infrastructure fix" },
-    { kind: "out", text: "Roboflow      #262   dataset pipeline improvement" },
-    { kind: "out", text: "Mindscape     #14    ai reasoning framework patch" },
+    { kind: "out", text: "browse all contributions on github → github.com/KhushbuY123" },
   ],
 };
 
@@ -146,8 +144,8 @@ export const Terminal = () => {
                 <p className="font-display font-bold text-primary text-lg leading-tight">KHUSHBU YADAV</p>
                 <p className="label-mono mt-2">ASSOCIATE SOFTWARE ENGINEER</p>
                 <div className="mt-3 flex gap-1.5 flex-wrap">
-                  <span className="chip text-[10px] py-0.5">Emerson</span>
-                  <span className="chip text-[10px] py-0.5">DRDO-IRDE</span>
+                  <span className="chip text-[10px] py-0.5">Shunyity</span>
+                  <span className="chip text-[10px] py-0.5">Full-Stack</span>
                 </div>
                 <span className="mt-2 inline-block rounded border border-terminal-green/40 bg-terminal-green/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-terminal-green">
                   Open to work
@@ -223,7 +221,7 @@ export const Terminal = () => {
 
           <div className="flex items-center justify-between border-t border-border bg-muted/40 px-5 py-2 font-mono text-[10px] uppercase tracking-wider">
             <span className="text-terminal-green">READY</span>
-            <span className="text-muted-foreground hidden sm:block">KHUSHBU_OS :: CORE v9.05 · CSE2026 · ALL SYSTEMS NOMINAL</span>
+            <span className="text-muted-foreground hidden sm:block">KHUSHBU_OS :: CORE v9.05 · CSE2025 · ALL SYSTEMS NOMINAL</span>
             <span className="text-terminal-green flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-terminal-green animate-pulse" /> ONLINE
             </span>

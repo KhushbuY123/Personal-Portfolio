@@ -72,8 +72,8 @@ export const Hero = () => {
 
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
             I'm <span className="text-foreground font-medium">Khushbu Yadav</span> — Associate Software Engineer.
-            I build production systems and applied ML — from agentic backends to computer-vision pipelines that
-            run in the field. CSE '25 graduate, currently shipping at scale.
+            I build production-grade full-stack web apps with React, Next.js, Node.js and PostgreSQL —
+            type-safe, performant, and pixel-clean. CSE '25 graduate, currently shipping at scale.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
