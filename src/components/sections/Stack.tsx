@@ -45,6 +45,35 @@ export const Stack = () => {
               </div>
             </div>
           ))}
+
+          {/* Coming soon — work in progress */}
+          <div className="relative bg-card p-6 overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-60" />
+            <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-primary/10 blur-2xl animate-pulse" />
+            <div className="relative">
+              <div className="flex items-center justify-between mb-4">
+                <p className="label-mono">// in progress</p>
+                <span className="inline-flex items-center gap-1.5 rounded border border-terminal-amber/40 bg-terminal-amber/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-terminal-amber">
+                  <span className="h-1.5 w-1.5 rounded-full bg-terminal-amber animate-pulse" />
+                  Loading
+                </span>
+              </div>
+              <p className="font-display font-bold text-lg leading-snug">
+                Working on myself —<br />
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  new skills compiling…
+                </span>
+              </p>
+              <p className="mt-3 font-mono text-xs text-muted-foreground leading-relaxed">
+                $ learning --next
+                <br />
+                <span className="text-primary">›</span> always shipping the next version of me.
+              </p>
+              <div className="mt-4 h-1 w-full rounded-full bg-border overflow-hidden">
+                <div className="h-full w-2/3 bg-gradient-to-r from-primary to-accent animate-pulse" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
