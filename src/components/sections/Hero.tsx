@@ -75,10 +75,6 @@ export const Hero = () => {
             specializing in React and modern full-stack development. I build high-quality, production-grade
             applications that are used daily by real users and teams.
           </p>
-          <p className="mt-4 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
-            I enjoy translating complex requirements into seamless, performant, and user-friendly experiences
-            across web and mobile.
-          </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <a
