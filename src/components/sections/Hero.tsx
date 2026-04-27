@@ -96,7 +96,7 @@ export const Hero = () => {
               <Mail className="h-4 w-4" /> Get in touch
             </a>
             <a
-              href="/Khushbu Yadav Resume.pdf"
+              href="/Khushbu-Yadav-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
