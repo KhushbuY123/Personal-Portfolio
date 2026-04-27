@@ -53,7 +53,7 @@ export const Footer = () => {
     <footer className="border-t border-border py-10">
       <div className="container-page flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-xs text-muted-foreground">
         <p>© 2026 Khushbu Yadav · all systems nominal</p>
-        <p>built with care · dark/light · india</p>
+        <p>built with care 💓· india</p>
       </div>
     </footer>
   );
