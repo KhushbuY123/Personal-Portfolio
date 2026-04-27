@@ -2,7 +2,7 @@ import { Quote as QuoteIcon } from "lucide-react";
 
 export const Quote = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-10 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
       <div className="container-page relative">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
