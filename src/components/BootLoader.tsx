@@ -4,7 +4,7 @@ const lines = [
   { text: "$ booting khushbu_os v2.6.1 ...", delay: 30 },
   { text: "[ ok ] mounting /portfolio", delay: 25 },
   { text: "[ ok ] starting service: animations", delay: 25 },
-  { text: "[ ok ] connecting: github.com/khushbuyadav", delay: 25 },
+  
   { text: "[ ok ] decrypting: ./profile --user=khushbu", delay: 25 },
   { text: "$ ./launch --portfolio", delay: 35 },
   { text: "ready.", delay: 40 },
