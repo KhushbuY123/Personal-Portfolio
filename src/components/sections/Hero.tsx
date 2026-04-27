@@ -71,9 +71,13 @@ export const Hero = () => {
           </h1>
 
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
-            I'm <span className="text-foreground font-medium">Khushbu Yadav</span> — Associate Software Engineer.
-            I build production-grade full-stack web apps with React, Next.js, Node.js and PostgreSQL —
-            type-safe, performant, and pixel-clean. CSE '25 graduate, currently shipping at scale.
+            I'm <span className="text-foreground font-medium">Khushbu Yadav</span>, an Associate Software Engineer
+            specializing in React and modern full-stack development. I build high-quality, production-grade
+            applications that are used daily by real users and teams.
+          </p>
+          <p className="mt-4 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
+            I enjoy translating complex requirements into seamless, performant, and user-friendly experiences
+            across web and mobile.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
