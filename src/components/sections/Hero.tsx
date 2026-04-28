@@ -43,6 +43,7 @@ const useTypewriter = (
 
 export const Hero = () => {
   const typed = useTypewriter(TYPE_WORDS);
+  const resumeHref = `${import.meta.env.BASE_URL}Khushbu%20Yadav%20Resume.pdf`;
   return (
     <section
       id="about"
@@ -96,7 +97,7 @@ export const Hero = () => {
               <Mail className="h-4 w-4" /> Get in touch
             </a>
             <a
-              href="/Khushbu-Yadav-Resume.pdf"
+              href={resumeHref}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"

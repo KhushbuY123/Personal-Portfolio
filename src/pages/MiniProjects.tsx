@@ -14,6 +14,7 @@ const miniProjects = [
     desc:
       "Classic memory game built with vanilla JavaScript. Tracks user sequences, increases difficulty per level, and stores the highest score — my first real dive into DOM events and game loops.",
     stack: ["HTML", "CSS", "JavaScript"],
+    link: "https://simon-says-seven-gules.vercel.app/",
     status: "Live",
   },
   {
@@ -25,6 +26,7 @@ const miniProjects = [
     desc:
       "A clean React app to convert between Celsius, Fahrenheit, and Kelvin in real time. Built while learning controlled components, hooks, and reactive state updates.",
     stack: ["React", "Hooks", "Tailwind"],
+    link: "https://temperature-converter-snowy-seven.vercel.app/",
     status: "Live",
   },
   {
@@ -34,8 +36,9 @@ const miniProjects = [
     emoji: "😂",
     title: "Meme Generator",
     desc:
-      "Pulls random memes from a public API and lets users refresh on demand. My first hands-on experience with fetch, async/await, and consuming third-party APIs in React.",
-    stack: ["React", "REST API", "CSS"],
+      "Create custom memes by uploading your own image, GIF, or video, adding top and bottom text, and downloading the final meme instantly.",
+    stack: ["React", "CSS"],
+    link: "https://khushbuy123.github.io/Meme-Generator/",
     status: "Live",
   },
   {
@@ -43,32 +46,35 @@ const miniProjects = [
     tag: "PRODUCTIVITY",
     tagColor: "text-primary border-primary/40 bg-primary/10",
     emoji: "✅",
-    title: "To-Do List",
+    title: "NexTask",
     desc:
       "Minimal task manager with add, complete, and delete actions. Persists tasks in localStorage so nothing is lost on refresh — a small project that taught me a lot about state.",
-    stack: ["React", "localStorage", "Tailwind"],
+    stack: ["React", "Tailwind"],
+    link: "https://nex-task-five.vercel.app/",
     status: "Live",
   },
   {
     no: "05",
     tag: "UTILITY",
     tagColor: "text-accent border-accent/40 bg-accent/10",
-    emoji: "🔐",
-    title: "Password Generator",
+    emoji: "🎨",
+    title: "Color Picker",
     desc:
-      "Generates strong, customizable passwords with toggles for length, numbers, and symbols. Practiced refs, useCallback, and clipboard APIs along the way.",
-    stack: ["React", "useCallback", "Clipboard API"],
+      "Random color generator that creates fresh palettes instantly. Built to practice DOM updates, event handling, and visual UI feedback.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    link: "https://khushbuy123.github.io/Color-Picker/",
     status: "Live",
   },
   {
     no: "06",
     tag: "API",
     tagColor: "text-orange-400 border-orange-400/40 bg-orange-400/10",
-    emoji: "🌦️",
-    title: "Weather App",
+    emoji: "🤣",
+    title: "Dad's Joke",
     desc:
-      "Search any city and get live weather data with icons and conditions. Built to understand API integration, loading states, and error handling in real apps.",
-    stack: ["React", "OpenWeather API", "Axios"],
+      "A lightweight fun app that serves random dad jokes to users with a clean one-click interaction flow.",
+    stack: ["JavaScript", "API", "HTML/CSS"],
+    link: "https://khushbuy123.github.io/Color-Picker/",
     status: "Live",
   },
 ];
@@ -158,7 +164,19 @@ const MiniProjects = () => {
                       </span>
                     ))}
                   </div>
-                  <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                  {p.link ? (
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      Live
+                      <ArrowUpRight className="h-4 w-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                    </a>
+                  ) : (
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                  )}
                 </div>
               </article>
             ))}
