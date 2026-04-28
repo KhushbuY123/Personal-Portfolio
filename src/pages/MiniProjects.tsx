@@ -90,7 +90,7 @@ const MiniProjects = () => {
 
           <div className="mt-8 flex items-center gap-2">
             <Wrench className="h-4 w-4 text-primary" />
-            <p className="label-mono">// tools & mini-projects</p>
+            <p className="label-mono">// the lab — experiments & tools</p>
           </div>
 
           <h1 className="mt-4 font-display font-bold text-5xl md:text-6xl lg:text-7xl tracking-tight">
@@ -114,7 +114,7 @@ const MiniProjects = () => {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <span className="chip">
               <Sparkles className="h-3 w-3 text-primary" />
-              {miniProjects.length} mini projects
+              {miniProjects.length} lab experiments
             </span>
             <span className="chip">
               <span className="h-1.5 w-1.5 rounded-full bg-terminal-green animate-pulse" />
@@ -168,7 +168,7 @@ const MiniProjects = () => {
           <div className="mt-5 rounded-xl border border-dashed border-border bg-card/40 p-8 text-center">
             <p className="font-mono text-xs text-muted-foreground mb-2">// status</p>
             <h3 className="font-display font-bold text-2xl">
-              More mini-projects{" "}
+              More experiments{" "}
               <span className="text-primary italic">brewing</span> in the lab
             </h3>
             <p className="mt-3 text-sm text-muted-foreground max-w-md mx-auto">
