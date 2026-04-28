@@ -3,57 +3,45 @@ import { ArrowUpRight } from "lucide-react";
 const projects = [
   {
     no: "01",
-    tag: "WEB",
+    tag: "FINTECH",
     tagColor: "text-sky-400 border-sky-400/40 bg-sky-400/10",
-    title: "Full-Stack E-Commerce Platform",
+    title: "Budget Brain",
     desc:
-      "Production-grade storefront with product catalog, cart, checkout, and admin dashboard. Server-side rendering, optimized queries, and a clean component system.",
-    stack: ["Next.js", "Node.js", "MongoDB", "Tailwind"],
+      "A smart budget tracking platform focused on helping users monitor spending patterns, plan savings, and make better financial decisions.",
+    stack: ["React", "TypeScript", "Tailwind CSS", "Node.js"],
+    status: "In Build Mode",
   },
   {
     no: "02",
-    tag: "API",
+    tag: "CLI",
     tagColor: "text-terminal-green border-terminal-green/40 bg-terminal-green/10",
-    title: "REST API & Auth Service",
+    title: "Docgen",
     desc:
-      "Type-safe REST endpoints with JWT auth, role-based access, and rate limiting. Postgres schema designed for scale, with sub-100ms p95 on hot endpoints.",
-    stack: ["Node.js", "Express", "PostgreSQL", "TypeScript"],
+      "Engineered a Node.js CLI that automates backend documentation by scanning JavaScript/TypeScript code and using Gemini API to generate structured markdown files for API testing and project overview docs. Launching soon.",
+    stack: ["Node.js", "JavaScript", "TypeScript", "Gemini API"],
+    link: "https://github.com/KhushbuY123/Docgen",
+    status: "Launching Soon",
   },
   {
     no: "03",
-    tag: "PWA",
+    tag: "PYTHON",
     tagColor: "text-primary border-primary/40 bg-primary/10",
-    title: "Installable Progressive Web App",
+    title: "Audio-Book",
     desc:
-      "Offline-first PWA with service workers, push-ready manifest, and native-like UX. Lighthouse 95+ across performance, accessibility, and best practices.",
-    stack: ["React", "Vite", "Workbox", "Tailwind"],
+      "Built an audiobook application using PyPDF2, pyttsx3, and Tkinter to convert written text into spoken words. Improved user engagement by 40% and supports inclusive access for users with visual or physical impairments.",
+    stack: ["Python", "PyPDF2", "pyttsx3", "Tkinter"],
+    link: "https://github.com/KhushbuY123/Audio-Book",
   },
   {
     no: "04",
-    tag: "UI",
+    tag: "WEATHER",
     tagColor: "text-accent border-accent/40 bg-accent/10",
-    title: "Component Library & Design System",
+    title: "Know Your Weather",
     desc:
-      "Reusable React + Tailwind components with theming, dark mode, and accessibility baked in. Drives consistent UI across multiple internal products.",
-    stack: ["React", "TypeScript", "Tailwind", "Radix"],
-  },
-  {
-    no: "05",
-    tag: "DASH",
-    tagColor: "text-fuchsia-400 border-fuchsia-400/40 bg-fuchsia-400/10",
-    title: "Realtime Analytics Dashboard",
-    desc:
-      "Interactive dashboard with charts, filters, and live updates. Redux Toolkit for state, Framer Motion for transitions, and a responsive grid that holds up on mobile.",
-    stack: ["React", "Redux Toolkit", "Framer Motion", "REST API"],
-  },
-  {
-    no: "06",
-    tag: "WEB",
-    tagColor: "text-orange-400 border-orange-400/40 bg-orange-400/10",
-    title: "Marketing Site & CMS",
-    desc:
-      "SEO-first marketing site with dynamic routing, MDX-driven content, and an editor-friendly CMS. Deployed on Vercel with edge caching and instant rollbacks.",
-    stack: ["Next.js", "MongoDB", "Mongoose", "Vercel"],
+      "A weather application built to practice API integration, dynamic data rendering, and real-time updates for current weather conditions.",
+    stack: ["JavaScript", "CSS", "HTML", "Weather API"],
+    link: "https://github.com/KhushbuY123/Weather-App",
+    liveLink: "https://find-your-weather.vercel.app/",
   },
 ];
 
@@ -90,7 +78,39 @@ export const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                {p.link ? (
+                  <div className="flex items-center gap-3">
+                    {p.status && (
+                      <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                        {p.status}
+                      </span>
+                    )}
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      GitHub
+                      <ArrowUpRight className="h-4 w-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                    </a>
+                    {p.liveLink && (
+                      <a
+                        href={p.liveLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        Live
+                        <ArrowUpRight className="h-4 w-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                      </a>
+                    )}
+                  </div>
+                ) : (
+                  <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                    {p.status}
+                  </span>
+                )}
               </div>
             </article>
           ))}
