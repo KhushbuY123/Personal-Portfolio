@@ -15,17 +15,27 @@ import { Recommendations } from "@/components/sections/Recommendations";
 import { Likes } from "@/components/sections/Likes";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
+const BOOT_KEY = "khushbu_booted";
+
 const Index = () => {
-  const [booted, setBooted] = useState(false);
+  const [booted, setBooted] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return sessionStorage.getItem(BOOT_KEY) === "1";
+  });
 
   // lock scroll while booting
   useEffect(() => {
     document.body.style.overflow = booted ? "" : "hidden";
   }, [booted]);
 
+  const handleBooted = () => {
+    sessionStorage.setItem(BOOT_KEY, "1");
+    setBooted(true);
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {!booted && <BootLoader onDone={() => setBooted(true)} />}
+      {!booted && <BootLoader onDone={handleBooted} />}
 
       <div className={booted ? "animate-fade-in-slow" : "opacity-0"}>
         <Navbar />
