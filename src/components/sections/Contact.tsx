@@ -16,8 +16,7 @@ export const Contact = () => {
         </p>
         <a
           href={resumeHref}
-          target="_blank"
-          rel="noopener noreferrer"
+          download
           className="mt-6 inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
         >
           <Download className="h-4 w-4" /> Download Resume
@@ -47,7 +46,8 @@ export const Contact = () => {
             <a
               key={label}
               href={href}
-              target="_blank"
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noreferrer" : undefined}
               className="group rounded-xl border border-border bg-card p-6 flex items-center justify-between hover:border-primary/50 hover:-translate-y-0.5 transition-all"
             >
               <div className="flex items-center gap-4">
