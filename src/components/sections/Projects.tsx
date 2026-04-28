@@ -19,7 +19,6 @@ const projects = [
     desc:
       "Engineered a Node.js CLI that automates backend documentation by scanning JavaScript/TypeScript code and using Gemini API to generate structured markdown files for API testing and project overview docs. Launching soon.",
     stack: ["Node.js", "JavaScript", "TypeScript", "Gemini API"],
-    link: "https://github.com/KhushbuY123/Docgen",
     status: "Launching Soon",
   },
   {
@@ -40,10 +39,21 @@ const projects = [
     desc:
       "A weather application built to practice API integration, dynamic data rendering, and real-time updates for current weather conditions.",
     stack: ["JavaScript", "CSS", "HTML", "Weather API"],
-    link: "https://github.com/KhushbuY123/Weather-App",
     liveLink: "https://find-your-weather.vercel.app/",
   },
 ];
+
+const getStatusClass = (status?: string) => {
+  if (status === "Launching Soon") {
+    return "text-orange-300 border-orange-400/40 bg-orange-400/10";
+  }
+
+  if (status === "In Build Mode") {
+    return "text-sky-300 border-sky-400/40 bg-sky-400/10";
+  }
+
+  return "text-muted-foreground border-border bg-muted/30";
+};
 
 export const Projects = () => {
   return (
@@ -78,22 +88,26 @@ export const Projects = () => {
                     </span>
                   ))}
                 </div>
-                {p.link ? (
+                {p.link || p.liveLink ? (
                   <div className="flex items-center gap-3">
                     {p.status && (
-                      <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                      <span
+                        className={`rounded border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${getStatusClass(p.status)}`}
+                      >
                         {p.status}
                       </span>
                     )}
-                    <a
-                      href={p.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary"
-                    >
-                      GitHub
-                      <ArrowUpRight className="h-4 w-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
-                    </a>
+                    {p.link && (
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary"
+                      >
+                        GitHub
+                        <ArrowUpRight className="h-4 w-4 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
+                      </a>
+                    )}
                     {p.liveLink && (
                       <a
                         href={p.liveLink}
@@ -107,7 +121,9 @@ export const Projects = () => {
                     )}
                   </div>
                 ) : (
-                  <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
+                  <span
+                    className={`rounded border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${getStatusClass(p.status)}`}
+                  >
                     {p.status}
                   </span>
                 )}

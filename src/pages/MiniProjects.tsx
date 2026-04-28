@@ -74,7 +74,7 @@ const miniProjects = [
     desc:
       "A lightweight fun app that serves random dad jokes to users with a clean one-click interaction flow.",
     stack: ["JavaScript", "API", "HTML/CSS"],
-    link: "https://khushbuy123.github.io/Color-Picker/",
+    link: "https://khushbuy123.github.io/Dad-s-Joke/",
     status: "Live",
   },
 ];
