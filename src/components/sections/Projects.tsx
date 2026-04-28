@@ -18,7 +18,7 @@ const projects = [
     title: "Docgen",
     desc:
       "Engineered a Node.js CLI that automates backend documentation by scanning JavaScript/TypeScript code and using Gemini API to generate structured markdown files for API testing and project overview docs. Launching soon.",
-    stack: ["Node.js", "JavaScript", "TypeScript", "Gemini API"],
+    stack: ["Node.js", "Express", "TypeScript", "Gemini API"],
     status: "Launching Soon",
   },
   {
