@@ -91,15 +91,14 @@ export const Hero = () => {
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <a
-              href="#contact"
+              href="mailto:khushbuyad123@gmail.com"
               className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 font-mono text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               <Mail className="h-4 w-4" /> Get in touch
             </a>
             <a
               href={resumeHref}
-              target="_blank"
-              rel="noopener noreferrer"
+              download
               className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
             >
               <Download className="h-4 w-4" /> Download Resume
