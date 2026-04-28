@@ -5,7 +5,7 @@ const groups = [
   },
   {
     label: "Frontend",
-    items: ["React", "Next.js", "Tailwind", "MUI", "Redux Toolkit", "Framer Motion"],
+    items: ["React", "Next.js", "Tailwind", "MUI", "Redux Toolkit", "Framer Motion", "Shadcn"],
   },
   {
     label: "Backend",
