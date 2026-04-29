@@ -43,7 +43,7 @@ const useTypewriter = (
 
 export const Hero = () => {
   const typed = useTypewriter(TYPE_WORDS);
-  const resumeHref = `${import.meta.env.BASE_URL}Khushbu%20Yadav%20Resume.pdf`;
+  const resumeHref = `${import.meta.env.BASE_URL}Khushbu_Yadav_Resume.pdf`;
   return (
     <section
       id="about"
@@ -98,8 +98,8 @@ export const Hero = () => {
             </a>
             <a
               href={resumeHref}
-              download
-              className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
+              download="Khushbu_Yadav_Resume.pdf" // Adding the filename here helps browsers
+              className="..."
             >
               <Download className="h-4 w-4" /> Download Resume
             </a>
