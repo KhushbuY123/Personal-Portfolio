@@ -1,7 +1,7 @@
 import { ArrowUpRight, Download, Github, Linkedin, Mail } from "lucide-react";
 
 export const Contact = () => {
-  const resumeHref = `${import.meta.env.BASE_URL}Khushbu%20Yadav%20Resume.pdf`;
+  const resumeHref = `${import.meta.env.BASE_URL}Khushbu_Yadav_Resume.pdf`;
   return (
     <section id="contact" className="py-24 section-divider scroll-mt-20">
       <div className="container-page">
@@ -15,12 +15,12 @@ export const Contact = () => {
           open to interesting collaborations.
         </p>
         <a
-          href={resumeHref}
-          download
-          className="mt-6 inline-flex items-center gap-2 rounded-md border border-border bg-card px-4 py-2 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
-        >
-          <Download className="h-4 w-4" /> Download Resume
-        </a>
+            href={resumeHref}
+            download="Khushbu_Yadav_Resume.pdf" 
+            className="..."
+          >
+            <Download className="h-4 w-4" /> Download Resume
+          </a>
 
         <div className="mt-12 grid md:grid-cols-3 gap-4">
           {[
