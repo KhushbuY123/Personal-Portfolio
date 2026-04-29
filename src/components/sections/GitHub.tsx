@@ -7,6 +7,7 @@ const USERNAME = "KhushbuY123";
 export const GitHub = () => {
   const [repos, setRepos] = useState<number | null>(null);
   const [stars, setStars] = useState<number | null>(null);
+  const [followers, setFollowers] = useState<number | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -20,6 +21,7 @@ export const GitHub = () => {
         const reposData = await reposRes.json();
         if (cancelled) return;
         setRepos(user.public_repos ?? (Array.isArray(reposData) ? reposData.length : 0));
+        setFollowers(user.followers ?? 0);
         if (Array.isArray(reposData)) {
           setStars(reposData.reduce((a: number, r: any) => a + (r.stargazers_count || 0), 0));
         }
@@ -57,6 +59,10 @@ export const GitHub = () => {
             <div>
               <div className="font-display text-3xl font-bold">{stars !== null ? stars : "—"}</div>
               <div className="label-mono mt-1">Stars Earned</div>
+            </div>
+            <div>
+              <div className="font-display text-3xl font-bold">{followers !== null ? followers : "—"}</div>
+              <div className="label-mono mt-1">Followers</div>
             </div>
           </div>
           <a
