@@ -17,7 +17,7 @@ export const Contact = () => {
         <a
             href={resumeHref}
             download="Khushbu_Yadav_Resume.pdf" 
-            className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
+            className="mt-2 inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 font-mono text-sm hover:border-primary/60 hover:text-primary transition-colors"
           >
             <Download className="h-4 w-4" /> Download Resume
           </a>
