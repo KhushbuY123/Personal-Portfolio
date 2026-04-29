@@ -5,7 +5,7 @@ const services = [
     icon: Globe,
     tag: "WEB",
     title: "Web Apps & Landing Pages",
-    desc: "Production-grade React + TypeScript builds. Fast, accessible, and themed end-to-end.",
+    desc: "Production-grade Next , React + TypeScript builds. Fast, accessible, and themed end-to-end.",
   },
   {
     icon: Code2,
