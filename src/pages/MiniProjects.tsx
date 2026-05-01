@@ -37,7 +37,7 @@ const miniProjects = [
     title: "Meme Generator",
     desc:
       "Create custom memes by uploading your own image, GIF, or video, adding top and bottom text, and downloading the final meme instantly.",
-    stack: ["React", "CSS"],
+    stack: ["HTML", "CSS", "Js"],
     link: "https://khushbuy123.github.io/Meme-Generator/",
     status: "Live",
   },
