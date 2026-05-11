@@ -19,7 +19,7 @@ const projects = [
     desc:
       "Engineered a Node.js CLI that automates backend documentation by scanning JavaScript/TypeScript code and using Gemini API to generate structured markdown files for API testing and project overview docs. Launching soon.",
     stack: ["Node.js", "Express", "TypeScript", "Gemini API"],
-    liveLink: "https://khushbu-yadav.vercel.app/",
+    liveLink: "https://www.npmjs.com/package/ai-doc-generator",
   },
   {
     no: "03",
