@@ -61,7 +61,7 @@ export const Hero = () => {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-terminal-green" />
             </span>
             <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Available · ASE · CSE '25
+              Available · SE · CSE '25
             </span>
             <span className="hidden sm:block h-3 w-px bg-border" />
             <div className="hidden sm:block">
@@ -84,7 +84,7 @@ export const Hero = () => {
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
             I'm{" "}
             <span className="text-foreground font-medium">Khushbu Yadav</span>,
-            an Associate Software Engineer specializing in React and modern
+            an Software Engineer specializing in React and modern
             full-stack development. I build high-quality, production-grade
             applications that are used daily by real users and teams.
           </p>
@@ -127,7 +127,7 @@ export const Hero = () => {
             </defs>
             <text className="fill-muted-foreground font-mono text-[9px] tracking-[0.3em] uppercase">
               <textPath href="#circle">
-                associate software engineer · cse '25 · india ·
+                software engineer · cse '25 · lucknow , india ·
               </textPath>
             </text>
           </svg>
