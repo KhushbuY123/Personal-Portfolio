@@ -84,7 +84,7 @@ export const Hero = () => {
           <p className="mt-8 max-w-xl text-base md:text-lg text-muted-foreground leading-relaxed">
             I'm{" "}
             <span className="text-foreground font-medium">Khushbu Yadav</span>,
-            an Software Engineer specializing in React and modern
+            a Software Engineer specializing in React and modern
             full-stack development. I build high-quality, production-grade
             applications that are used daily by real users and teams.
           </p>
