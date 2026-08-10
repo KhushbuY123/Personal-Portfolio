@@ -1,7 +1,7 @@
 const roles = [
   {
     period: { from: "Aug 2025", to: "Present", active: true },
-    title: "Associate Software Engineer",
+    title: "Software Engineer",
     org: "Shunyity Tech Solutions",
     bullets: [
       "Developing type-safe, production-grade applications using **TypeScript, React, and PostgreSQL**, improving code reliability and maintainability.",
